@@ -77,7 +77,7 @@ exports.updateTask = (req, res) => {
       if (data[0] === 1) {
         res
           .status(200)
-          .send({ message: "Task is Updated Successfully", data: data[1] });
+          .send(data[1]);
       } else {
         res.status(404).send({
           message: `Cannot update task with id=${id}, Maybe task was not found or req.body is empty!`,

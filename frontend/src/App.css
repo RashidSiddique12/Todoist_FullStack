@@ -1,0 +1,402 @@
+.profile{
+  
+  margin: 1rem 2rem 0 0.9rem;
+  display: flex;
+  justify-content: space-between;
+  justify-items: center;
+  font-size: 15px;
+}
+.profile .name{
+  font-weight: bold;
+  margin-left: 8px;
+}
+.profile > div{
+  cursor: pointer;
+  /* border: 1px solid black; */
+}
+.addTaskMn {
+  margin: 2rem 2rem 0 1rem;
+  color: #c64539;
+  font-weight: bold;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+.addTaskMn .icon {
+  color: white;
+  background-color: #dc4c3e;
+  border-radius: 50%;
+  padding: 0.2rem;
+}
+/* .addTaskMn button{
+  font-weight: bold;
+  background-color: #fee6e3;
+} */
+.addTaskModal input {
+  border: none;
+  margin-bottom: 1rem;
+  margin-left: -1rem;
+  /* background-color: #fee6e3; */
+}
+.addTaskModal input:focus {
+  outline: none;
+  border: none;
+}
+.addTaskModal .bold::placeholder {
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+.addTaskModal button {
+  outline: none;
+  border: none;
+  background-color: transparent;
+  position: absolute;
+  bottom: 1.5rem;
+  left: 1rem;
+  cursor: pointer;
+}
+.addTaskModal button span {
+  margin: 0.2rem;
+}
+.addTaskModal button:hover {
+  background-color: rgb(239, 239, 239);
+  color: black;
+}
+
+.menuDiv {
+  margin: 0 2rem 0 1rem;
+}
+
+.menuTitle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.menuTitle div,
+h3 {
+  cursor: pointer;
+  color: rgb(100, 100, 100);
+  font-size: 1rem;
+}
+.ProjectAction {
+  display: flex;
+  /* justify-content: space-between; */
+  gap: 2rem;
+}
+
+.menuDiv li {
+  list-style: none;
+  font-size: 1rem;
+  /* line-height: 1.5rem; */
+  padding: 0.2rem;
+  display: flex;
+  justify-content: space-between;
+}
+.menuDiv li span {
+  margin: 0 1rem 0 1rem;
+  /* border: 1px solid black; */
+}
+
+.menuDiv li:hover {
+  background-color: #fee6e3;
+  border-radius: 6px;
+  /* padding: 1rem; */
+}
+
+.menuDiv li button {
+  display: none;
+  border: none;
+  padding: 0rem 0.5rem;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+.menuDiv li:hover button {
+  display: block;
+}
+.menuDiv li button:hover {
+  background-color: white;
+  border-radius: 50%;
+}
+.ProjectModal .ant-modal-title {
+  font-size: 1.3rem;
+}
+
+.AddProjectForm label {
+  font-weight: 600;
+  margin: 0.3rem;
+}
+.AddProjectForm input {
+  margin-bottom: 1rem;
+  width: 95%;
+  padding: 0.4rem;
+  margin-top: 0.3rem;
+  border-radius: 4px;
+  border: 1px solid rgb(65, 64, 64);
+}
+
+.projectaction li {
+  margin: 0.5rem;
+  padding: 0.2rem 0.5rem;
+  font-size: 1rem;
+}
+
+.projectaction li span {
+  margin-right: 0.5rem;
+}
+
+.projectaction li:hover {
+  background-color: rgb(243, 239, 239);
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.favDiv {
+  margin-top: 0;
+}
+
+.myProjectHeader {
+  float: inline-end;
+  margin-right: 1rem;
+  font-weight: bold;
+  color: rgb(104, 103, 103);
+}
+.projectHeader {
+  padding: 0;
+  background-color: "white";
+  /* // border: "1px solid black" */
+  margin-bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: rgb(104, 103, 103);
+}
+.projectHeader h3 {
+  margin-left: 1.5rem;
+  font-size: 15px;
+}
+.projectHeader button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 1.3rem;
+}
+.projectHeader .action {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.projectHeader .action > div {
+  cursor: pointer;
+}
+
+.bodySection {
+  width: 70%;
+  /* border: 1px solid black; */
+  margin: auto;
+  
+}
+.bodySection h1{
+  margin-top: 0;
+}
+
+.addDiv {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 1rem;
+}
+.addDiv button {
+  background-color: rgb(236, 234, 234);
+  font-weight: bold;
+  color: black;
+}
+
+.addDiv button:hover {
+  background-color: rgb(201, 200, 200);
+  color: inherit;
+}
+
+.ProjectList {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.9rem;
+  /* border: 1px solid black; */
+  font-size: 1.1rem;
+  border-radius: 5px;
+}
+.ProjectList:hover {
+  background-color: rgb(244, 244, 244);
+}
+
+.ProjectList span {
+  margin-right: 1rem;
+}
+.ProjectList button {
+  display: none;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+.ProjectList:hover button {
+  display: block;
+}
+
+.taskList {
+  list-style: none;
+  /* margin-top: 1rem; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.taskList p{
+  cursor: pointer;
+}
+.taskAction {
+  display: flex;
+}
+
+.taskAction button {
+  border: none;
+  background-color: transparent;
+  font-size: 1.3rem;
+  margin: 0 0.5rem;
+  color: rgb(132, 131, 131);
+  display: none;
+}
+.taskList:hover .taskAction button {
+  display: inline-flex;
+}
+
+.taskDes {
+  margin: 0;
+  margin-top: -0.5rem;
+  margin-left: 1.5rem;
+  font-size: 0.8rem;
+  color: rgb(115, 114, 114);
+}
+.addTask {
+  /* border: 1px solid black; */
+  display: inline-block;
+  color: rgb(126, 125, 125);
+}
+.addTask .icon {
+  color: #dc4c3e;
+  margin-right: 1rem;
+}
+.addTask:hover {
+  color: #dc4c3e;
+}
+
+.addTask:hover .icon {
+  background-color: #dc4c3e;
+  color: white;
+  border-radius: 50%;
+}
+
+.addTaskBox {
+  border: 1px solid gray;
+  border-radius: 6px;
+}
+
+.addTaskBox input {
+  border: none;
+  outline: none;
+}
+.addTaskBox .bold::placeholder {
+  font-weight: bold;
+  color: grey;
+}
+
+.addTaskAction {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin: 0.5rem;
+}
+
+.addTaskAction .add {
+  background-color: #dc4c3e;
+  color: white;
+  font-weight: bold;
+}
+.addTaskAction .add:hover{
+  color: white !important;
+  background-color: #b62518;
+}
+.addTaskAction .cancle {
+  font-weight: bold;
+  background-color: rgb(239, 236, 236);
+}
+.addTaskAction .cancle:hover{
+  background-color: rgb(206, 204, 204);
+}
+
+.EditTask {
+  width: 100%;
+}
+.movetotask h4 {
+  margin: 1rem 0 0.5rem 0rem;
+}
+.movetotask h4 span {
+  margin-right: 0.2rem;
+}
+
+.movetotask li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.movetotask li:hover {
+  background-color: rgb(234, 232, 232);
+  border-radius: 6px;
+}
+
+.movetotask li span {
+  margin: 1rem;
+}
+
+.taskdoneIcon {
+  background-color: transparent;
+  width: 19px;
+  height: 19px;
+  border-radius: 50%;
+  margin-right: 0.5rem;
+  border: 1px solid rgb(154, 152, 152);
+  outline: none;
+  cursor: pointer;
+  transition: 0.3ms;
+  color: white;
+}
+.taskdoneIcon:hover {
+  /* background-color: orangered; */
+  color: rgb(154, 152, 152);
+}
+
+
+.ant-modal-footer .ant-btn-primary {
+  background-color: #dc4c3e;
+  font-weight: bold;
+}
+
+.ant-modal-footer .ant-btn-primary:hover{
+  background-color: #af2c20  !important;
+  color : white !important
+}
+
+.ant-btn-default{
+  background-color: rgb(240, 239, 234);
+}
+
+.ant-btn-default:hover{
+  background-color: rgb(209, 207, 206) !important;
+  color: inherit !important;
+}
+

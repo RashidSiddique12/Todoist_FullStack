@@ -1,0 +1,20 @@
+
+.EmptyBox{
+    /* border : 1px solid black; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 3rem;
+}
+.EmptyBox p{
+    text-align: center;
+    margin-top: 0;
+    color: rgb(116, 116, 117);
+    font-weight: ;
+    
+}
+
+.EmptyBox h3{
+    margin: 0.4rem
+}

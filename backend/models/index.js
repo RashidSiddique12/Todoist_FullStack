@@ -11,9 +11,13 @@ const db = {};
 db.Sequelize = Sequelize;
 db.sequelize = sequelize;
 
+db.user = require("./user.model.js")(sequelize, Sequelize)
 db.projects = require("./project.model.js")(sequelize, Sequelize);
 db.tasks = require("./task.model.js")(sequelize, Sequelize);
 
+db.user.hasMany(db.projects,{
+  onDelete:"CASCADE"
+})
 
 db.projects.hasMany(db.tasks, {
   // foreignKey: "project_id",

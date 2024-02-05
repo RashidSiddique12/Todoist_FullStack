@@ -11,6 +11,7 @@ exports.createProject = (req, res) => {
 
   const NewProject = {
     ...req.body,
+    UserId: req.userId,
   };
 
   Project.create(NewProject)
@@ -26,7 +27,11 @@ exports.createProject = (req, res) => {
 };
 
 exports.getAllProject = (req, res) => {
-  Project.findAll()
+  Project.findAll({
+    where: {
+      UserId: req.userId,
+    },
+  })
     .then((data) => {
       res.status(200).send(data);
     })
@@ -60,10 +65,15 @@ exports.getProjectById = (req, res) => {
 exports.updateProject = (req, res) => {
   const id = req.params.id;
   const updatedata = req.body;
-  Project.update(updatedata, { where: { id: id }, returning: true, })
+  Project.update(updatedata, {
+    where: { id: id, UserId: req.userId },
+    returning: true,
+  })
     .then((data) => {
       if (data[0] === 1) {
-        res.status(200).send({ message: "Project is updated SuccessFully", data : data[1] });
+        res
+          .status(200)
+          .send(data[1]);
       } else {
         res.status(404).send({
           message: `Cannot update Project with id=${id}, Maybe Project was not found or req.body is empty! `,
@@ -80,7 +90,7 @@ exports.updateProject = (req, res) => {
 exports.deleteProject = (req, res) => {
   const id = req.params.id;
 
-  Project.destroy({ where: { id: id } })
+  Project.destroy({ where: { id: id, UserId: req.userId } })
     .then((data) => {
       if (data === 1) {
         res.status(200).send(true);
@@ -96,5 +106,3 @@ exports.deleteProject = (req, res) => {
       });
     });
 };
-
-
