@@ -25,7 +25,7 @@ function AddTask() {
   const { projectData } = useSelector((state) => state.project);
   const dispatch = useDispatch();
   const [searchVal, setSearchVal] = useState("");
-  const [selectedProject, setSelectedProject] = useState({ name: "inbox" });
+  const [selectedProject, setSelectedProject] = useState({name : "Choose Project"});
 
   const showModal = () => {
     setIsModalOpen(true);

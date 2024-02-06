@@ -15,7 +15,7 @@
 .authInput {
   /* border: 1px solid black; */
   height: 70vh;
-  width: 50%;
+  width: 45%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -23,7 +23,7 @@
 }
 .authImage {
   /* border: 1px solid black; */
-  width: 45%;
+  width: 50%;
   display: flex;
   /* justify-content: center; */
   align-items: center;
@@ -55,10 +55,15 @@
   padding: 0.8rem;
   font-size: 20px;
   font-weight: bold;
-  background-color: #c64539;
+  background-color: #db4f42;
   color: white;
   border-radius: 8px;
+  cursor: pointer;
 }
 .authImage img {
   width: 80%;
+}
+
+.form .submitButton:hover{
+  background-color: #c64539;
 }

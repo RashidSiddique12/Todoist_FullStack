@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { addTaskEP, getTasksEP } from "../../api";
 import {
   addNewTask,
@@ -80,7 +80,7 @@ function ProjectContent() {
           background: "white",
         }}
       >
-        <h3>My Projects /</h3>
+        <Link to="/home"><h3>My Projects /</h3></Link>
         <div className="action">
           <div>
             <UserAddOutlined /> Share

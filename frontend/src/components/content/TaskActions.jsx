@@ -15,7 +15,6 @@ function TaskActions({taskId, projectId}) {
     <div>
       <Popover content={content} title="Action" trigger="click">
         <button>
-          {/* <EllipsisOutlined /> */}
           <PiDotsThreeOutlineThin style={{cursor:"pointer"}} />
         </button>
       </Popover>

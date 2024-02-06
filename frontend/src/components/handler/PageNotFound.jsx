@@ -10,8 +10,8 @@ function PageNotFound({message="something went wrong"}) {
         title="400"
         subTitle={`Sorry ! ${message}`}
         extra={
-          <Link to="/home"><Button style={{ backgroundColor: "#dc4c3e", color: "white" }}>
-          Back Home
+          <Link to="/"><Button style={{ backgroundColor: "#dc4c3e", color: "white" }}>
+          Go to Login Page
         </Button></Link>
         }
       />

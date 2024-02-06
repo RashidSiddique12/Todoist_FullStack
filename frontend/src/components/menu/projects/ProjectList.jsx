@@ -10,7 +10,7 @@ function ProjectList({ data }) {
           <div key={project.id}>
             <li>
               <Link
-                to={`/project/${project.id}`}
+                to={`/home/project/${project.id}`}
                 state={{ ProjectName: project.name }}
                 key={project.id}
                 style={{ textDecoration: "none", color: "inherit" }}

@@ -1,12 +1,7 @@
-import {
-  PlusOutlined,
-  SearchOutlined,
-  SettingOutlined,
-} from "@ant-design/icons";
-import { Button, Input, Spin } from "antd";
-import React, { useState } from "react";
-import ProjectList from "../menu/projects/ProjectList";
-import { useDispatch, useSelector } from "react-redux";
+import { SearchOutlined, SettingOutlined } from "@ant-design/icons";
+import { Input, Spin } from "antd";
+import { useState } from "react";
+import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import ProjectAction from "../menu/projects/ProjectAction";
 import AddProject from "../menu/projects/AddProject";
@@ -40,6 +35,7 @@ function MyProjects() {
       </Header>
       <div className="bodySection">
         <h1>My Projects</h1>
+
         <p>Free Plan</p>
         <Input
           size="large"
