@@ -18,11 +18,11 @@ function HandleFav({ projectId }) {
     projectData &&
       projectData.map((project) => {
         if (project.id === projectId) {
-          setIsFavorite(project.isFavorite);
+          setIsFavorite(project.is_favorite);
           setEditProjectName(project.name);
         }
       });
-  }, [projectId]);
+  }, [projectId,projectData]);
 
   const handlefavorite = async () => {
     const updatedFavorite = !isFavorite;

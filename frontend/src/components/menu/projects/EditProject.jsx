@@ -1,6 +1,6 @@
 import { EditOutlined } from "@ant-design/icons";
 import { Alert, Modal, Spin, Switch } from "antd";
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { EditProjectEP } from "../../../api";
 import {
@@ -8,7 +8,6 @@ import {
   setIsFav,
   setNewProjectName,
 } from "../../../store/slice/projectSlice";
-import AlertMessage from "../../handler/AlertMessage";
 
 function EditProject({ projectId }) {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -18,23 +17,23 @@ function EditProject({ projectId }) {
   const dispatch = useDispatch();
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
-
   useEffect(() => {
     console.log("run")
     projectData &&
       projectData.map((project) => {
         if (project.id === projectId) {
-          dispatch(setIsFav(project.isFavorite));
+          dispatch(setIsFav(project.is_favorite));
           dispatch(setNewProjectName(project.name));
         }
       });
-  }, [projectId, isModalOpen]);
+  }, [isModalOpen]);
 
   const showModal = () => {
     setIsModalOpen(true);
   };
 
-  const handleOk = async () => {
+  const handleOk = async (e) => {
+    e.preventDefault();
     try {
       setLoading(true);
       const res = await EditProjectEP(projectId, newProjectName, isFavorite);

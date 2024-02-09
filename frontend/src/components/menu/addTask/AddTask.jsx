@@ -25,7 +25,7 @@ function AddTask() {
   const { projectData } = useSelector((state) => state.project);
   const dispatch = useDispatch();
   const [searchVal, setSearchVal] = useState("");
-  const [selectedProject, setSelectedProject] = useState({name : "Choose Project"});
+  const [selectedProject, setSelectedProject] = useState({name : "choose Project"});
 
   const showModal = () => {
     setIsModalOpen(true);
@@ -35,13 +35,13 @@ function AddTask() {
     e.preventDefault();
     dispatch(setLoading(true));
     try {
-      const data = await addTaskEP(
+      const res = await addTaskEP(
         selectedProject.id,
         newcontent,
         newDescription
       );
-      // console.log(data);
-      dispatch(addNewTask({ id: data.projectId, data }));
+      // console.log(res.data);
+      dispatch(addNewTask({ id: res.data.ProjectId, data :res.data }));
     } catch (error) {
       console.log(error);
       dispatch(setError(error.message));

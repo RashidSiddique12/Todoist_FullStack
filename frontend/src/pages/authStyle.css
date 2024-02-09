@@ -6,15 +6,15 @@
 }
 
 .bodyContainer {
-  width: 80%;
+  /* width: 80%; */
   /* border: 1px solid black; */
-  height: 70vh;
+  /* height: 70vh; */
   display: flex;
   gap: 5%;
 }
 .authInput {
   /* border: 1px solid black; */
-  height: 70vh;
+  /* height: 70vh; */
   width: 45%;
   display: flex;
   justify-content: center;
@@ -66,4 +66,19 @@
 
 .form .submitButton:hover{
   background-color: #c64539;
+}
+
+@media (max-width : 768px) {
+  .bodyContainer{
+    flex-direction: column;
+    width: 100%;
+  }
+  .authInput{
+    width: 80%;
+    margin: auto;
+    /* border: 1px solid red; */
+  }
+  .authImage{
+    display: none;
+  }
 }

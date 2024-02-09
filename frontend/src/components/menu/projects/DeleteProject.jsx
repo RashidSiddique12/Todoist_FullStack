@@ -5,7 +5,6 @@ import { deleteProjectEP } from "../../../api";
 import { useDispatch } from "react-redux";
 import { deleteProject } from "../../../store/slice/projectSlice";
 import { useNavigate } from "react-router-dom";
-import AlertMessage from "../../handler/AlertMessage";
 
 function DeleteProject({ projectId }) {
   const dispatch = useDispatch();
@@ -24,7 +23,7 @@ function DeleteProject({ projectId }) {
       // console.log(res.data)
       if (res.data) {
         dispatch(deleteProject(projectId));
-        navigate("/");
+        navigate("/home");
       }
       setIsModalOpen(false);
     } catch (error) {

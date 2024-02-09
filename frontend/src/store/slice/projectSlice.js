@@ -28,6 +28,7 @@ const projectSlice = createSlice({
       );
     },
     setEditProject: (state, action) => {
+      // console.log(action.payload.res[0])/
       state.projectData = state.projectData.map((project) => {
         if (project.id === action.payload.projectId) {
           return action.payload.res[0];
@@ -37,6 +38,7 @@ const projectSlice = createSlice({
       });
       state.newProjectName = ""
       state.isFavorite = false;
+      // console.log("edited")
     },
     setFavData: (state, action) => {
       state.favData = action.payload;
